@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1672389395 source:d:\toni\kuliah\struktur data\if-45-01\tubes\tubes\main.cpp
+	"menu.h"
+
+1672395358 source:d:\toni\kuliah\struktur data\if-45-01\tubes\tubes\paket.cpp
+	"paket.h"
+
+1672395280 d:\toni\kuliah\struktur data\if-45-01\tubes\tubes\paket.h
+	<iostream>
+	"kurir.h"
+
+1672393390 d:\toni\kuliah\struktur data\if-45-01\tubes\tubes\kurir.h
+	<iostream>
+	<conio.h>
+
+1672393477 source:d:\toni\kuliah\struktur data\if-45-01\tubes\tubes\kurir.cpp
+	"kurir.h"
+
+1672394612 d:\toni\kuliah\struktur data\if-45-01\tubes\tubes\menu.h
+	"kurir.h"
+	"paket.h"
+
+1672396145 source:d:\toni\kuliah\struktur data\if-45-01\tubes\tubes\menu.cpp
+	"menu.h"
+	"paket.h"
+	"kurir.h"
+
