@@ -13,6 +13,7 @@ adr_paket createNewElmPaket(infotypepaket x){
 }
 
 void insertPaket(List_paket &L, adr_paket P){
+
     if(first(L) == NULL){
         first(L) = P;
         last(L) = P;
@@ -37,10 +38,8 @@ void printDataPaket(List_paket L){
 
 void connectPaket(List_kurir &LK, List_paket &LP, infotypekurir x){
     adr_kurir next_kurir;
-    adr_kurir temp;
 
-    temp = findElementKurir(LK,x);
-    next_kurir = temp;
+    next_kurir = findElementKurir(LK,x);
 
 
 }
@@ -56,4 +55,11 @@ adr_paket findPaket(List_paket L, infotypepaket x){
     return NULL;
 }
 
+
+void deletePaketTertentu(List_paket &LP, List_kurir &LK){
+        if(first(LP) != NULL){
+//            findPaket(LP,x);
+
+        }
+}
 

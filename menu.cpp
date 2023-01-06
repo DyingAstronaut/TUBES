@@ -1,6 +1,4 @@
 #include "menu.h"
-#include "paket.h"
-#include "kurir.h"
 
 using namespace std;
 
@@ -61,6 +59,8 @@ void showMenu(int inputmenu, int i, List_kurir &LK, List_paket &LP){
             break;
             case 3:
                 cout << "Connect Kurir Test" << endl;
+                connectKurirToPaket(LK,LP);
+                getch();
             break;
             }
 
@@ -100,6 +100,28 @@ void showMenu(int inputmenu, int i, List_kurir &LK, List_paket &LP){
             cout << "1. Mencari Data Kurir" << endl;
             cout << "2. Mencari Data Paket pada Kurir Tertentu" << endl;
             cout << "0. Back To Menu" << endl;
+
+            do{
+        cout << "Pilih menu : ";
+        cin >> i;
+        if(i >= 0 && i <= 2){
+            stop = true;
+        }else{
+            cout << "Input keliru" << endl
+            << "Pilih menu : ";
+        }
+    }while(stop != true);
+        switch(i){
+            case 1:
+                findKurir(LK);
+                getch();
+            break;
+            case 2:
+                cout << "Mencari Data Paket pada Kurir Tertentu test" << endl;
+                getch();
+            break;
+            }
+
         break;
 
         case 4:
@@ -127,6 +149,7 @@ void showMenu(int inputmenu, int i, List_kurir &LK, List_paket &LP){
             break;
             case 2:
                 cout << "Tampilkan Semua Data Kurir dan Paketnya" << endl;
+                showKurirDanPaket(LK,LP);
                 getch();
             break;
             case 3:
@@ -211,6 +234,8 @@ void connectKurirToPaket(List_kurir &LK, List_paket &LP){
     cin >> p.jenis_paket;
     adr_paket PP = findPaket(LP,p);
 
+    next_kurir(PP) = PK;
+
 
 }
 
@@ -225,3 +250,43 @@ void PrintSemuaDataPaket(List_paket L){
     printDataPaket(L);
     cout << "\n\nTekan apa saja untuk Kembali.."<<endl;
 }
+
+void hapusPaketTertentu(List_paket &LP, infotypepaket x){
+    cout << "== Hapus Paket Tertentu ==" << endl;
+
+}
+
+void findKurir(List_kurir L){
+    adr_kurir P;
+    infotypekurir x;
+    cout << "========== Data Kurir ==========" << endl;
+    cout << endl;
+    cout << "Nama Kurir : ";
+    cin >> x;
+    P = findElementKurir(L,x);
+    if (P != NULL){
+        cout << endl << "Kurir Ditemukan : " << info(P) << endl;
+    }else {
+        cout << "Kurir Tidak Ditemukan!" << endl << endl;
+    }
+}
+
+void showKurirDanPaket(List_kurir LK, List_paket LP){
+
+    cout << "========== Data Kurir beserta Paketnya ==========" << endl;
+    cout << endl;
+    printRelasi(LK,LP);
+    cout << "\n\nTekan apa saja untuk Kembali.."<<endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,8 @@
 #include "kurir.h"
 
+
 void createListKurir(List_kurir &L){
     first(L) = NULL;
-    last(L) = NULL;
 }
 
 adr_kurir createNewElmKurir(infotypekurir x){
@@ -14,32 +14,42 @@ adr_kurir createNewElmKurir(infotypekurir x){
 
 
 void insertLastKurir(List_kurir &L, adr_kurir P){
+    adr_kurir Q = first(L);
 
     if(first(L) == NULL){
         first(L) = P;
-        last(L) = P;
-    }else {
-        next(last(L)) = P;
-        last(L) = P;
+        next(P) = first(L);
+    }else{
+        while(next(Q) != first(L)){
+            Q = next(Q);
+        }
+        next(Q) = P;
+        next(P) = first(L);
     }
 
 }
 
-void DeleteFirst(List_kurir &L, adr_kurir &P){
-    P = first(L);
-    if(P != NULL){
-        first(L) = next(P);
-        next(P) = NULL;
+void deleteKurirdanPaket(List_kurir &L, adr_kurir &P){
+    if(first(L) == NULL){
+        cout << "List Kurir Kosong" << endl;
+    }else {
+        //blom beres
     }
 }
 
 void printDataKurir(List_kurir L){
     adr_kurir P = first(L);
+    adr_kurir Q = next(P);
     int i = 1;
-    while(P != NULL){
-        cout << i << ".) "<< info(P) << endl;
-        i++;
-        P = next(P);
+    if(first(L) == NULL){
+        cout << "List Kurir Kosong" << endl;
+    }else {
+        while(Q != first(L)){
+            cout << i << ".) "<< info(P) << endl;
+            P = next(P);
+            Q = P;
+            i++;
+        }
     }
 }
 

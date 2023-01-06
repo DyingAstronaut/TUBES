@@ -24,8 +24,8 @@ typedef struct elm_kurir *adr_kurir;
 
 struct elm_paket{
     infotypepaket info;
-    adr_kurir next_kurir;
     adr_paket next;
+    adr_kurir next_kurir; ///Pointer Parent
 };
 struct List_paket{
     adr_paket first;
