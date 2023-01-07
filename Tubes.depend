@@ -57,3 +57,35 @@
 	"kurir.h"
 	"paket.h"
 
+1673033407 source:c:\users\acer\documents\github\tubes\kurir.cpp
+	"kurir.h"
+
+1673033407 c:\users\acer\documents\github\tubes\kurir.h
+	<iostream>
+	<conio.h>
+
+1673041166 source:c:\users\acer\documents\github\tubes\main.cpp
+	"menu.h"
+
+1673033407 c:\users\acer\documents\github\tubes\menu.h
+	"kurir.h"
+	"paket.h"
+	"relasi.h"
+
+1673039864 c:\users\acer\documents\github\tubes\paket.h
+	<iostream>
+	"kurir.h"
+
+1673033407 c:\users\acer\documents\github\tubes\relasi.h
+	"kurir.h"
+	"paket.h"
+
+1673039575 source:c:\users\acer\documents\github\tubes\paket.cpp
+	"paket.h"
+
+1673043925 source:c:\users\acer\documents\github\tubes\relasi.cpp
+	"relasi.h"
+
+1673040222 source:c:\users\acer\documents\github\tubes\menu.cpp
+	"menu.h"
+

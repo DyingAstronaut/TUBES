@@ -36,14 +36,6 @@ void printDataPaket(List_paket L){
     }
 }
 
-void connectPaket(List_kurir &LK, List_paket &LP, infotypekurir x){
-    adr_kurir next_kurir;
-
-    next_kurir = findElementKurir(LK,x);
-
-
-}
-
 adr_paket findPaket(List_paket L, infotypepaket x){
     adr_paket P = first(L);
     while(P != NULL){

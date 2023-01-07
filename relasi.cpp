@@ -8,8 +8,8 @@ void printRelasi(List_kurir LK, List_paket LP){
 
     PK = first(LK);
     Q = next(PK);
-    while(Q != first(LK)){
-        cout << "Nama Kurir ke- " << j << " : " << info(PK) << endl;
+    do{
+        cout << "Nama Kurir ke- "<<j<< " : " << info(PK) << endl;
         PP = first(LP);
         while(next(next_kurir(PP)) != NULL){
             cout << "\tPaket- " << i << endl
@@ -18,12 +18,11 @@ void printRelasi(List_kurir LK, List_paket LP){
             << "\t\tBerat : " << info(PP).berat << endl;
             PP = next(PP);
             i++;
-
         }
-        next(PK);
-        Q = PK;
+        PK = next(PK);
+        Q = next(Q);
         j++;
-    }
+    } while (Q != first(LK));
 }
 
 
