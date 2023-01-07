@@ -12,8 +12,8 @@ int inputmenu(){
     clearscreen();
     cout << "=====================================================================" << endl;
     cout << "\t\t\tTugas Besar STD\n" << endl;
-    cout << "\t\t\tFarras Rafif(1301213020)" << endl;
-    cout << "\t\t\tMahasiswa2" << endl;
+    cout << "\t\t\tFarras Rafif | 1301213020" << endl;
+    cout << "\t\t\tToni Perkasa Darmawan | 1301194307" << endl;
     cout << "============================= MAIN MENU =============================" << endl;
     cout << " " <<endl;
     cout << "1. Menu Insert"<<"               "<<"3. Menu Find" <<"               "<< "0. Exit App" << endl;
@@ -239,6 +239,8 @@ void connectKurirToPaket(List_kurir &LK, List_paket &LP){
     adr_paket PP = findPaket(LP,p);
 
     next_kurir(PP) = PK;
+    cout << "Relasi telah dibuat.."<<endl;
+    cout << "Tekan apa saja untuk Kembali.."<<endl<<endl;
 }
 
 void PrintSemuaDataKurir(List_kurir L){
